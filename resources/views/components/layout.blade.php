@@ -23,6 +23,7 @@
     <body class="antialiased">
         <header></header>
         <main>
+            <h1>Gästebuch</h1>
             {{$slot}}
         </main>
         <footer></footer>

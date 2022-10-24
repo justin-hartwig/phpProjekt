@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\BookEntryController;
-use App\Models\BookEntry;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [BookEntryController::class, 'index']);
+
+Route::get('/bookentrys/{bookentry}', [BookEntryController::class, 'show']);
+
+Route::get('/bookentrys/create', [BookEntryController::class, 'create']);

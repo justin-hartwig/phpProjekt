@@ -12,4 +12,16 @@ class BookEntryController extends Controller
             'bookEntrys' => BookEntry::all()
         ]);
     }
+
+    public function show(BookEntry $bookentry) {
+        return view('bookentry.show', [
+            'bookEntry' => $bookentry
+        ]);
+    }
+
+    public function create() {
+        return view('bookentry.create', [
+            'bookEntrys' => BookEntry::all()
+        ]);
+    }
 }
