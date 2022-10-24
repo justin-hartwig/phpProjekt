@@ -21,6 +21,10 @@
         </style>
     </head>
     <body class="antialiased">
-        @yield('guestbook')
+        <header></header>
+        <main>
+            {{$slot}}
+        </main>
+        <footer></footer>
     </body>
 </html>

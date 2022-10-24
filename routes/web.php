@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookEntryController;
 use App\Models\BookEntry;
 use Illuminate\Support\Facades\Route;
 
@@ -14,8 +15,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('guestbook', [
-        'bookEntrys' => BookEntry::all()
-    ]);
-});
+Route::get('/', [BookEntryController::class, 'index']);
