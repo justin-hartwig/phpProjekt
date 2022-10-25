@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('book_entries', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 255);
-            $table->string('text');
-            $table->string('userid');
-            $table->string('released');
+            $table->string('title',255);
+            $table->string('text',1000);
+            $table->string('userid')->default(1);
+            $table->string('released')->default(1);
             $table->timestamps();
         });
     }

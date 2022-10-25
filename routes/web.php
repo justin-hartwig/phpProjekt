@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [BookEntryController::class, 'index']);
 
-Route::get('/bookentrys/{bookentry}', [BookEntryController::class, 'show']);
-
 Route::get('/bookentrys/create', [BookEntryController::class, 'create']);
+
+Route::post('/bookentrys', [BookEntryController::class, 'store']);
+
+Route::get('/bookentrys/{bookentry}', [BookEntryController::class, 'show']);

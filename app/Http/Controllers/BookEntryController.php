@@ -20,8 +20,17 @@ class BookEntryController extends Controller
     }
 
     public function create() {
-        return view('bookentry.create', [
-            'bookEntrys' => BookEntry::all()
+        return view('bookentry.create');
+    }
+
+    public function store(Request $request) {
+        $formData = $request->validate([
+            'title' => 'required|max:255',
+            'text' => 'required|max:1000'
         ]);
+
+        BookEntry::create($formData);
+
+        return redirect('/');
     }
 }
