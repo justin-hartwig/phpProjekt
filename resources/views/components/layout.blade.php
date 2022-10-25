@@ -21,6 +21,7 @@
         </style>
     </head>
     <body class="antialiased">
+        <x-message></x-message>
         <header></header>
         <main>
             <h1>Gästebuch</h1>

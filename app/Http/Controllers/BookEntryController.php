@@ -31,6 +31,6 @@ class BookEntryController extends Controller
 
         BookEntry::create($formData);
 
-        return redirect('/');
+        return redirect('/')->with('message', 'Gästebucheintrag erstellt. Der Eintrag ist sichtbar nach der Freigabe des Betreibers.');
     }
 }
