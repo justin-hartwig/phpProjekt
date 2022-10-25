@@ -20,4 +20,8 @@ Route::get('/bookentrys/create', [BookEntryController::class, 'create']);
 
 Route::post('/bookentrys', [BookEntryController::class, 'store']);
 
+Route::get('/bookentrys/{bookentry}/edit', [BookEntryController::class, 'edit']);
+
+Route::put('/bookentrys/{bookentry}', [BookEntryController::class, 'update']);
+
 Route::get('/bookentrys/{bookentry}', [BookEntryController::class, 'show']);

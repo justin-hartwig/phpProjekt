@@ -33,4 +33,19 @@ class BookEntryController extends Controller
 
         return redirect('/')->with('message', 'Gästebucheintrag erstellt. Der Eintrag ist sichtbar nach der Freigabe des Betreibers.');
     }
+
+    public function edit(BookEntry $bookentry) {
+        return view('bookentry.edit', ['bookentry' => $bookentry]);
+    }
+
+    public function update(Request $request, BookEntry $bookentry) {
+        $formData = $request->validate([
+            'title' => 'required|max:255',
+            'text' => 'required|max:1000'
+        ]);
+
+        $bookentry->update($formData);
+
+        return redirect('/bookentrys/'.$bookentry->id)->with('message', 'Gästebucheintrag bearbeitet. Der bearbeitete Eintrag ist sichtbar nach der Freigabe des Betreibers.')->send();
+    }
 }
