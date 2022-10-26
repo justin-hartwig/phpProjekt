@@ -11,6 +11,6 @@
         @error('text')
 		    <p class="error-text">Bitte geben Sie einen Text ein!</p>
 	    @enderror
-        <button type="submit">Bearbeiteten Eintrag einreichen</button>
+        <button type="submit" class="btn btn-success">Bearbeiteten Eintrag einreichen</button>
     </form>
 </x-layout>
