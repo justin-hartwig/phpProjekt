@@ -1,0 +1,26 @@
+.navbar {
+
+    .navbar-brand img {
+        max-width: 5rem;
+        filter: $filter-to-black;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+
+        .nav-item .nav-link {
+            color: $text-color;
+            font-size: $default-font-size;
+            font-family: $text-font;
+            text-decoration: none;
+            transition: $default-color-transition;
+            margin-left: 1rem;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: $primary;
+            }
+        }
+    }
+}
