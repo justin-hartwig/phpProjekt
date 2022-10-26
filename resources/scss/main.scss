@@ -1,1 +1,8 @@
-@import "./base/typography";
+//base
+@import "./base/variables";
+@import "./base/fonts";
+
+//layout
+@import "./layout/typography";
+
+//components
