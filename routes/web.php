@@ -28,6 +28,8 @@ Route::put('/bookentrys/{bookentry}', [BookEntryController::class, 'update'])->m
 
 Route::delete('/bookentrys/{bookentry}', [BookEntryController::class, 'destroy'])->middleware('auth');
 
+Route::get('/bookentrys/verwalten', [BookEntryController::class, 'manage'])->middleware('auth');
+
 Route::get('/bookentrys/{bookentry}', [BookEntryController::class, 'show']);
 
 //User
@@ -37,6 +39,6 @@ Route::post('/Nutzer', [UserController::class, 'store']);
 
 Route::post('/abmelden', [UserController::class, 'logout'])->middleware('auth');
 
-Route::get('/anmelden', [UserController::class, 'login'])->name('login')->middleware('guest');;
+Route::get('/anmelden', [UserController::class, 'login'])->name('login')->middleware('guest');
 
 Route::post('/Nutzer/authentifizieren', [UserController::class, 'authenticate']);

@@ -3,10 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\BookEntry;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class BookEntryController extends Controller
 {
+    public function userActionAllowed(BookEntry $bookentry){
+        if($bookentry->user_id != auth()->id()){
+            abort(403, 'Unerlaubte AKtion!');
+        }
+    }
+
     public function index() {
         return view('bookentry.index', [
             'bookEntrys' => BookEntry::all()
@@ -37,6 +44,8 @@ class BookEntryController extends Controller
     }
 
     public function edit(BookEntry $bookentry) {
+        BookEntryController::userActionAllowed($bookentry);
+
         return view('bookentry.edit', ['bookentry' => $bookentry]);
     }
 
@@ -52,7 +61,13 @@ class BookEntryController extends Controller
     }
 
     public function destroy(BookEntry $bookentry) {
+        BookEntryController::userActionAllowed($bookentry);
+
         $bookentry->delete();
         return redirect('/')->with('message', 'Eintrag wurde gelöscht!');
+    }
+
+    public function manage() {
+        return view('bookentry.manage', ['bookEntrys' => auth()->user()->bookentrys()->get()]);
     }
 }
