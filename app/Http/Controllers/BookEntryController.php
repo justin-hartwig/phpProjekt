@@ -29,6 +29,8 @@ class BookEntryController extends Controller
             'text' => 'required|max:1000'
         ]);
 
+        $formData['user_id'] = auth()->id();
+
         BookEntry::create($formData);
 
         return redirect('/')->with('message', 'Gästebucheintrag erstellt. Der Eintrag ist sichtbar nach der Freigabe des Betreibers.');

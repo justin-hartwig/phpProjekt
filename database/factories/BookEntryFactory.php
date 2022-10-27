@@ -19,7 +19,6 @@ class BookEntryFactory extends Factory
         return [
             'title' => fake()->sentence(),
             'text' => fake()->paragraph(5),
-            'userid' => fake()->randomNumber(),
             'released' => fake()->boolean()
         ];
     }
