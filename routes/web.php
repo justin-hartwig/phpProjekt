@@ -18,25 +18,25 @@ use App\Http\Controllers\BookEntryController;
 //BookEntryController
 Route::get('/', [BookEntryController::class, 'index']);
 
-Route::get('/bookentrys/create', [BookEntryController::class, 'create']);
+Route::get('/bookentrys/create', [BookEntryController::class, 'create'])->middleware('auth');
 
-Route::post('/bookentrys', [BookEntryController::class, 'store']);
+Route::post('/bookentrys', [BookEntryController::class, 'store'])->middleware('auth');
 
-Route::get('/bookentrys/{bookentry}/edit', [BookEntryController::class, 'edit']);
+Route::get('/bookentrys/{bookentry}/edit', [BookEntryController::class, 'edit'])->middleware('auth');
 
-Route::put('/bookentrys/{bookentry}', [BookEntryController::class, 'update']);
+Route::put('/bookentrys/{bookentry}', [BookEntryController::class, 'update'])->middleware('auth');
 
-Route::delete('/bookentrys/{bookentry}', [BookEntryController::class, 'destroy']);
+Route::delete('/bookentrys/{bookentry}', [BookEntryController::class, 'destroy'])->middleware('auth');
 
 Route::get('/bookentrys/{bookentry}', [BookEntryController::class, 'show']);
 
 //User
-Route::get('/registrieren', [UserController::class, 'create']);
+Route::get('/registrieren', [UserController::class, 'create'])->middleware('guest');
 
 Route::post('/Nutzer', [UserController::class, 'store']);
 
-Route::post('/abmelden', [UserController::class, 'logout']);
+Route::post('/abmelden', [UserController::class, 'logout'])->middleware('auth');
 
-Route::get('/anmelden', [UserController::class, 'login']);
+Route::get('/anmelden', [UserController::class, 'login'])->name('login')->middleware('guest');;
 
 Route::post('/Nutzer/authentifizieren', [UserController::class, 'authenticate']);
