@@ -35,8 +35,7 @@
                     <div class="col-12">
                         <h1 class="text-center py-5">Gästebuch</h1>
                     </div>
-                </div>
-                
+                </div>  
             </div>
             <div class="container">
                 <div class="row">
@@ -46,6 +45,18 @@
                 </div>
             </div>
         </main>
-        <footer></footer>
+        <footer class="py-5 mt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-10 d-flex flex-column justify-content-end">
+                        <a href="https://www.die-waldhuette.de/impressum/" class="mb-3 d-block">Impressum</a>
+                        <h3>Wir freuen uns auf Sie!</h3>
+                    </div>
+                    <div class="col-2">
+                        <a class="footer-brand" href="/"><img src="/images/logo-die-waldhuette.svg" alt="Logo Die Waldhütte"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

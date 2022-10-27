@@ -9,14 +9,28 @@ h6 {
     font-weight: 700;
 }
 
-@for $i from 1 through 6 {
-    h#{$i} {
-       font-size: $default-heading-size - 6px * $i;
-    }
+h1 {
+    font-size: $default-heading-size;
+}
+
+h2 {
+    font-size: $default-heading-size - 12px;
+}
+
+h3 {
+    font-size: $default-heading-size - 16px;
 }
 
 a {
     text-decoration: none;
+    color: $text-color;
+    transition: $default-color-transition;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $primary;
+    }
 
     h1,
     h2,
