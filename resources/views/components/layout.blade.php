@@ -18,12 +18,26 @@
                     <nav class="navbar">
                         <a class="navbar-brand" href="/"><img src="/images/logo-die-waldhuette.svg" alt="Logo Die Waldhütte"></a>
                         <ul class="navbar-nav">
+                            @auth
                             <li class="nav-item">
-                                <a class="nav-link">Login</a>
+                                <a class="nav-link" href="/bookentrys/verwalten">Einträge verwalten</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link">Registrieren</a>
+                                <form method="POST" action="/abmelden">
+                                    @csrf
+                                    <button class="btn btn-primary" type="submit">
+                                        Abmelden
+                                    </button>
+                                </form>
                             </li>
+                            @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="/anmelden">Anmelden</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/registrieren">Registrieren</a>
+                            </li>
+                            @endauth
                         </ul>
                     </nav>
                 </div>
