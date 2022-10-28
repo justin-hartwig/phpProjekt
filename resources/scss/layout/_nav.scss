@@ -14,13 +14,23 @@
             font-family: $text-font;
             text-decoration: none;
             transition: $default-color-transition;
-            margin-left: 1rem;
+            margin-left: 1.5rem;
 
             &:hover,
             &:focus,
             &:active {
                 color: $primary;
             }
+        }
+    }
+
+    .btn-inline {
+        border: none;
+
+        &:hover,
+        &:focus,
+        &:active {
+            border: none;
         }
     }
 }

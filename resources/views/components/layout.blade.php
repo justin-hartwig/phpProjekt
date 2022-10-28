@@ -17,7 +17,7 @@
                 <div class="row">
                     <nav class="navbar">
                         <a class="navbar-brand" href="/"><img src="/images/logo-die-waldhuette.svg" alt="Logo Die Waldhütte"></a>
-                        <ul class="navbar-nav">
+                        <ul class="navbar-nav align-items-center">
                             @auth
                             <li class="nav-item">
                                 <a class="nav-link" href="/bookentrys/verwalten">Einträge verwalten</a>
@@ -25,7 +25,7 @@
                             <li class="nav-item">
                                 <form method="POST" action="/abmelden">
                                     @csrf
-                                    <button class="btn btn-primary" type="submit">
+                                    <button class="btn btn-inline nav-link" type="submit">
                                         Abmelden
                                     </button>
                                 </form>
