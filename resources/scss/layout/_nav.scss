@@ -1,4 +1,6 @@
 .navbar {
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
 
     .navbar-brand img {
         max-width: 5rem;

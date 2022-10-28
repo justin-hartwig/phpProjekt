@@ -1,0 +1,22 @@
+.message {
+    background-color: $primary;
+    color: $white;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+    animation: fade-out-animation 1s ease-out 5s forwards;
+
+    @keyframes fade-out-animation {
+        0% {
+            top: 0;
+        }
+        100% {
+            top: -100%;
+        }
+    }
+
+    p {
+        margin-top: 1rem;
+    }
+}
