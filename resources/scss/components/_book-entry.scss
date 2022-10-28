@@ -1,0 +1,6 @@
+.book-entry {
+    border: 1px solid $text-color;
+    padding: 1rem 1rem calc(var(--bs-gutter-x) * 1) 1rem;
+    height: 100%;
+    max-height: calc(100% - calc(var(--bs-gutter-x) * 1));
+}
