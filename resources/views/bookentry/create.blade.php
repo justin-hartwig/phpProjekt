@@ -1,5 +1,7 @@
 <x-layout>
-    <h2>Hier können Sie einen neuen Eintrag anlegen.<h2>
+    <div class="col-12">
+        <h1 class="text-center py-5">Erstellen</h1>
+    </div>
     <form method="POST" action="/bookentrys">
         @csrf
         <label for="title">Titel</label>

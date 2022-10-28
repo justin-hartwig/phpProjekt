@@ -1,4 +1,7 @@
 <x-layout>
+    <div class="col-12">
+        <h1 class="text-center py-5">Gästebucheintrag</h1>
+    </div>
     @if($bookEntry->released)
         <x-bookentry :entry='$bookEntry' width='full-width'/>
     @endif

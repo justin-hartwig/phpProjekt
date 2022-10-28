@@ -1,5 +1,7 @@
 <x-layout>
-    <h2>Hier können Sie ihren Eintrag bearbeiten.<h2>
+    <div class="col-12">
+        <h1 class="text-center py-5">Bearbeiten</h1>
+    </div>
     <form method="POST" action="/bookentrys/{{$bookentry->id}}">
         @csrf
         @method('PUT')

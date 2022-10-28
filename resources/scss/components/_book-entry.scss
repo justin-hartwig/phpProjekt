@@ -4,3 +4,28 @@
     height: 100%;
     max-height: calc(100% - calc(var(--bs-gutter-x) * 1));
 }
+
+.book-entry-overview {
+    border: 1px solid $text-color;
+    padding: 1rem;
+
+    .book-entry {
+        border: none;
+        padding: 0;
+        height: unset;
+        max-height: unset;
+        padding-bottom: 1rem;
+
+        h2 {
+            margin-bottom: 0;
+        }
+
+        .button-wraper > * {
+            margin-left: 1rem;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+}
