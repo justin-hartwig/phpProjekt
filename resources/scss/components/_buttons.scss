@@ -44,3 +44,15 @@ button.btn {
         }
     }
 }
+
+.button-wraper {
+    form .btn,
+    a .btn {
+        margin-left: 1rem;
+    }
+
+    form:first-child .btn,
+    a:first-child .btn {
+        margin-left: 0;
+    }
+}

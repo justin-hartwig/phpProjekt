@@ -13,7 +13,7 @@
                             <a href="/bookentrys/{{$entry->id}}"><h2 class="mb-3">{{$entry->title}}</h2></a>
                             <p>{{$entry->text}}</p>
                         </div>
-                        <div class="button-wraper d-flex">
+                        <div class="button-wraper d-flex flex-wrap">
                             <form method="POST" action="/admin/bookentrys/{{$entry->id}}/release">
                                 @csrf
                                 @method('PUT')

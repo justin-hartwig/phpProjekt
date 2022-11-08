@@ -13,7 +13,7 @@
                             <a href="/bookentrys/{{$entry->id}}"><h2 class="mb-3">{{$entry->title}}</h2></a>
                             <p>{{$entry->text}}</p>
                         </div>
-                        <div class="button-wraper d-flex">
+                        <div class="button-wraper d-flex flex-wrap">
                             <a href="/bookentrys/{{$entry->id}}/edit"><button class="btn btn-primary">Bearbeiten</button></a>
                             <form method="POST" action="/bookentrys/{{$entry->id}}">
                                 @csrf
