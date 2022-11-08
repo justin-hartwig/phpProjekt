@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BookEntryController;
+use App\Http\Controllers\BookEntryControllerAdmin;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,3 +43,10 @@ Route::post('/abmelden', [UserController::class, 'logout'])->middleware('auth');
 Route::get('/anmelden', [UserController::class, 'login'])->name('login')->middleware('guest');
 
 Route::post('/Nutzer/authentifizieren', [UserController::class, 'authenticate']);
+
+//Admin
+Route::get('admin/bookentrys/verwalten', [BookEntryControllerAdmin::class, 'manage'])->middleware('auth', 'is_admin');
+
+Route::delete('admin/bookentrys/{bookentry}', [BookEntryControllerAdmin::class, 'destroy'])->middleware('auth', 'is_admin');
+
+Route::put('admin/bookentrys/{bookentry}/release', [BookEntryControllerAdmin::class, 'update'])->middleware('auth');

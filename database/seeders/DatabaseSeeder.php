@@ -17,6 +17,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $admin = User::factory()->create();
+        $admin->name = 'Hans Peter';
+        $admin->is_admin = 1;
+        $admin->email = 'test@test.de';
+        $admin->password = bcrypt('Passwort');
+        $admin->save();
+
         $user = User::factory()->create();
 
         BookEntry::factory(6)->create([

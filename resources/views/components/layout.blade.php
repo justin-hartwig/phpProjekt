@@ -19,9 +19,15 @@
                         <a class="navbar-brand" href="/"><img src="/images/logo-die-waldhuette.svg" alt="Logo Die Waldhütte"></a>
                         <ul class="navbar-nav align-items-center">
                             @auth
-                            <li class="nav-item">
-                                <a class="nav-link" href="/bookentrys/verwalten">Einträge verwalten</a>
-                            </li>
+                                @if (auth()->user()->is_admin)
+                                <li class="nav-item">
+                                    <a class="nav-link" href="admin/bookentrys/verwalten">Einträge verwalten</a>
+                                </li>
+                                @else
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/bookentrys/verwalten">Einträge verwalten</a>
+                                </li>
+                                @endif
                             <li class="nav-item">
                                 <form method="POST" action="/abmelden">
                                     @csrf

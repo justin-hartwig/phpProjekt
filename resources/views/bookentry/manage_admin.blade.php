@@ -8,14 +8,22 @@
         <div class="col-12">
             <div class="book-entry-overview mb-5">
                 @foreach ($bookEntrys as $entry)
-                    <div class="book-entry d-flex justify-content-between align-items-center">
+                    <div class="book-entry d-flex justify-content-between align-items-center flex-wrap">
                         <div class="text-wrapper">
                             <a href="/bookentrys/{{$entry->id}}"><h2 class="mb-3">{{$entry->title}}</h2></a>
                             <p>{{$entry->text}}</p>
                         </div>
                         <div class="button-wraper d-flex">
-                            <a href="/bookentrys/{{$entry->id}}/edit"><button class="btn btn-primary">Bearbeiten</button></a>
-                            <form method="POST" action="/bookentrys/{{$entry->id}}">
+                            <form method="POST" action="/admin/bookentrys/{{$entry->id}}/release">
+                                @csrf
+                                @method('PUT')
+                                @if($entry->released)
+                                    <button class="btn btn-primary">Verbergen</button>
+                                @else
+                                    <button class="btn btn-primary">Freigeben</button>
+                                @endif
+                            </form>
+                            <form method="POST" action="/admin/bookentrys/{{$entry->id}}">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-danger">Eintrag löschen</button>
