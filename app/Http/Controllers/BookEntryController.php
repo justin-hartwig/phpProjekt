@@ -10,19 +10,21 @@ class BookEntryController extends Controller
 {
     public function userActionAllowed(BookEntry $bookentry){
         if($bookentry->user_id != auth()->id()){
-            abort(403, 'Unerlaubte AKtion!');
+            abort(403, 'Unerlaubte Aktion!');
         }
     }
 
     public function index() {
         return view('bookentry.index', [
-            'bookEntrys' => BookEntry::all()
+            'bookEntrys' => BookEntry::all(),
+            'users' => User::all()
         ]);
     }
 
     public function show(BookEntry $bookentry) {
         return view('bookentry.show', [
-            'bookEntry' => $bookentry
+            'bookEntry' => $bookentry,
+            'users' => User::all()
         ]);
     }
 
@@ -69,6 +71,6 @@ class BookEntryController extends Controller
     }
 
     public function manage() {
-        return view('bookentry.manage', ['bookEntrys' => auth()->user()->bookentrys()->get()]);
+        return view('bookentry.manage', ['bookEntrys' => auth()->user()->bookentrys()->get(), 'users' => User::all()]);
     }
 }

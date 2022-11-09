@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\BookEntry;
 use Illuminate\Http\Request;
 
 class BookEntryControllerAdmin extends Controller
 {
     public function manage() {
-        return view('bookentry.manage_admin', ['bookEntrys' => BookEntry::all()]);
+        return view('bookentry.manage_admin', ['bookEntrys' => BookEntry::all(), 'users' => User::all()]);
     }
 
     public function destroy(BookEntry $bookentry) {

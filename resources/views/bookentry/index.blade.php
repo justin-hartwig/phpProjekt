@@ -4,7 +4,7 @@
     </div>
     @foreach ($bookEntrys as $entry)
         @if($entry->released)
-            <x-bookentry :entry='$entry' width='normal'/>
+            <x-bookentry :entry='$entry' :users='$users' width='normal'/>
         @endif
     @endforeach
     @auth

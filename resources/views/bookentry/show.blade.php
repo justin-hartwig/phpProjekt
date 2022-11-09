@@ -2,9 +2,7 @@
     <div class="col-12">
         <h1 class="text-center py-5">Gästebucheintrag</h1>
     </div>
-    @if($bookEntry->released)
-        <x-bookentry :entry='$bookEntry' width='full-width'/>
-    @endif
+    <x-bookentry :entry='$bookEntry' :users='$users' width='full-width'/>
     @auth
         <div class="button-wraper d-flex flex-wrap">
             <a href="/bookentrys/create"><button class="btn btn-primary">Neuen Gästebucheintrag anlegen</button></a>
