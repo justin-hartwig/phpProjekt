@@ -2,7 +2,7 @@
     <div class="col-12">
         <h1 class="text-center py-5">Bearbeiten</h1>
     </div>
-    <form method="POST" action="/bookentrys/{{$bookentry->id}}">
+    <form method="POST" action="/Eintraege/{{$bookentry->id}}">
         @csrf
         @method('PUT')
         <div class="d-flex flex-column mb-4">

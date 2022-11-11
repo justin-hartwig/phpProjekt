@@ -10,7 +10,7 @@
                 @foreach ($bookEntrys as $entry)
                     <div class="book-entry d-flex justify-content-between align-items-center">
                         <div class="text-wrapper">
-                            <a href="/bookentrys/{{$entry->id}}"><h2 class="mb-3">{{$entry->title}}</h2></a>
+                            <a href="/Eintraege/{{$entry->id}}"><h2 class="mb-3">{{$entry->title}}</h2></a>
                             @foreach($users as $user)
                                 @if($user->id == $entry->user_id)
                                     <p>{{$user->name}}</p>
@@ -19,8 +19,8 @@
                             <p>{{$entry->text}}</p>
                         </div>
                         <div class="button-wraper d-flex flex-wrap">
-                            <a href="/bookentrys/{{$entry->id}}/edit"><button class="btn btn-primary">Bearbeiten</button></a>
-                            <form method="POST" action="/bookentrys/{{$entry->id}}">
+                            <a href="/Eintraege/{{$entry->id}}/bearbeiten"><button class="btn btn-primary">Bearbeiten</button></a>
+                            <form method="POST" action="/Eintraege/{{$entry->id}}">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-danger">Eintrag löschen</button>
@@ -31,5 +31,5 @@
             </div>
         </div>
     @endif
-    <a href="/bookentrys/create"><button class="btn btn-primary">Neuen Gästebucheintrag anlegen</button></a>
+    <a href="/Eintraege/erstellen"><button class="btn btn-primary">Neuen Gästebucheintrag anlegen</button></a>
 </x-layout>

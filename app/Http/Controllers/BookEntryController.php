@@ -60,7 +60,7 @@ class BookEntryController extends Controller
         $bookentry->update($formData);
         $bookentry->update(['released' => false]);
 
-        return redirect('/bookentrys/'.$bookentry->id)->with('message', 'Gästebucheintrag bearbeitet. Der bearbeitete Eintrag ist sichtbar nach der Freigabe des Betreibers.');
+        return redirect('/Eintraege/'.$bookentry->id)->with('message', 'Gästebucheintrag bearbeitet. Der bearbeitete Eintrag ist sichtbar nach der Freigabe des Betreibers.');
     }
 
     public function destroy(BookEntry $bookentry) {

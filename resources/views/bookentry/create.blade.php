@@ -2,7 +2,7 @@
     <div class="col-12">
         <h1 class="text-center py-5">Erstellen</h1>
     </div>
-    <form method="POST" action="/bookentrys">
+    <form method="POST" action="/Eintraege">
         @csrf
         <div class="d-flex flex-column mb-4">
             <label class="mb-2" for="title">Titel</label>

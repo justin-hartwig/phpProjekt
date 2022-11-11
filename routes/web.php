@@ -19,19 +19,19 @@ use App\Http\Controllers\BookEntryControllerAdmin;
 //BookEntryController
 Route::get('/', [BookEntryController::class, 'index']);
 
-Route::get('/bookentrys/create', [BookEntryController::class, 'create'])->middleware('auth');
+Route::get('/Eintraege/erstellen', [BookEntryController::class, 'create'])->middleware('auth');
 
-Route::post('/bookentrys', [BookEntryController::class, 'store'])->middleware('auth');
+Route::post('/Eintraege', [BookEntryController::class, 'store'])->middleware('auth');
 
-Route::get('/bookentrys/{bookentry}/edit', [BookEntryController::class, 'edit'])->middleware('auth');
+Route::get('/Eintraege/{bookentry}/bearbeiten', [BookEntryController::class, 'edit'])->middleware('auth');
 
-Route::put('/bookentrys/{bookentry}', [BookEntryController::class, 'update'])->middleware('auth');
+Route::put('/Eintraege/{bookentry}', [BookEntryController::class, 'update'])->middleware('auth');
 
-Route::delete('/bookentrys/{bookentry}', [BookEntryController::class, 'destroy'])->middleware('auth');
+Route::delete('/Eintraege/{bookentry}', [BookEntryController::class, 'destroy'])->middleware('auth');
 
-Route::get('/bookentrys/verwalten', [BookEntryController::class, 'manage'])->middleware('auth');
+Route::get('/Eintraege/verwalten', [BookEntryController::class, 'manage'])->middleware('auth');
 
-Route::get('/bookentrys/{bookentry}', [BookEntryController::class, 'show']);
+Route::get('/Eintraege/{bookentry}', [BookEntryController::class, 'show']);
 
 //User
 Route::get('/registrieren', [UserController::class, 'create'])->middleware('guest');
@@ -45,8 +45,8 @@ Route::get('/anmelden', [UserController::class, 'login'])->name('login')->middle
 Route::post('/Nutzer/authentifizieren', [UserController::class, 'authenticate']);
 
 //Admin
-Route::get('admin/bookentrys/verwalten', [BookEntryControllerAdmin::class, 'manage'])->middleware('auth', 'is_admin');
+Route::get('admin/Eintraege/verwalten', [BookEntryControllerAdmin::class, 'manage'])->middleware('auth', 'is_admin');
 
-Route::delete('admin/bookentrys/{bookentry}', [BookEntryControllerAdmin::class, 'destroy'])->middleware('auth', 'is_admin');
+Route::delete('admin/Eintraege/{bookentry}', [BookEntryControllerAdmin::class, 'destroy'])->middleware('auth', 'is_admin');
 
-Route::put('admin/bookentrys/{bookentry}/release', [BookEntryControllerAdmin::class, 'update'])->middleware('auth');
+Route::put('admin/Eintraege/{bookentry}/release', [BookEntryControllerAdmin::class, 'update'])->middleware('auth');

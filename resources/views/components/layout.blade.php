@@ -21,11 +21,11 @@
                             @auth
                                 @if (auth()->user()->is_admin)
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/admin/bookentrys/verwalten">Einträge verwalten</a>
+                                    <a class="nav-link" href="/admin/Eintraege/verwalten">Einträge verwalten</a>
                                 </li>
                                 @else
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/bookentrys/verwalten">Einträge verwalten</a>
+                                    <a class="nav-link" href="/Eintraege/verwalten">Einträge verwalten</a>
                                 </li>
                                 @endif
                             <li class="nav-item">

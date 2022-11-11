@@ -2,7 +2,7 @@
 @if ($width === 'full-width')
     <div class="col-12">
         <div class="book-entry">
-            <a href="/bookentrys/{{$entry->id}}"><h2>{{$entry->title}}</h2></a>
+            <a href="/Eintraege/{{$entry->id}}"><h2>{{$entry->title}}</h2></a>
             @foreach($users as $user)
                 @if($user->id == $entry->user_id)
                     <p>{{$user->name}}</p>
@@ -14,7 +14,7 @@
 @else
     <div class="col-12 col-md-6">
         <div class="book-entry">
-            <a href="/bookentrys/{{$entry->id}}"><h2>{{$entry->title}}</h2></a>
+            <a href="/Eintraege/{{$entry->id}}"><h2>{{$entry->title}}</h2></a>
             @foreach($users as $user)
                 @if($user->id == $entry->user_id)
                     <p>{{$user->name}}</p>
