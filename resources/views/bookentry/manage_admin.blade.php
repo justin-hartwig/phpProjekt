@@ -1,6 +1,6 @@
 <x-layout>
     <div class="col-12">
-        <h1 class="text-center py-5">Ihre Gästebucheinträge</h1>
+        <h1 class="text-center py-5">Alle Gästebucheinträge</h1>
     </div>
     @if (count($bookEntrys) == 0)
         <p>Kein Eintrag vorhanden.</p>

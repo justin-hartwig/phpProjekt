@@ -30,22 +30,16 @@ a {
     &:focus,
     &:active {
         color: $primary;
-    }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: $text-color;
-        text-decoration: none;
-        transition: $default-color-transition;
-
-        &:hover,
-        &:focus,
-        &:active {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             color: $primary;
+            text-decoration: none;
+            transition: $default-color-transition;
         }
     }
 }
