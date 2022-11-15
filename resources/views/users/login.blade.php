@@ -16,7 +16,7 @@
 		        <p class="error-text">{{$message}}</p>
 	        @enderror
         </div>
-        <button type="submit" class="btn btn-success mb-4">Anmelden</button>
+        <button type="submit" class="btn btn-success btn-icon mb-4"><img src="/images/icons/log-in.svg" alt="Icon anmelden">Anmelden</button>
         <p>Sie haben noch keinen Account? <a href="/registrieren">Hier</a> können Sie sich registrieren.</p>
     </form>
 </x-layout>

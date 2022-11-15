@@ -21,27 +21,28 @@
                             @auth
                                 @if (auth()->user()->is_admin)
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/admin/Eintraege/verwalten">Einträge verwalten</a>
+                                    <a class="nav-link" href="/admin/Eintraege/verwalten"><img src="/images/icons/notes.svg" alt="Icon verwalten">Einträge verwalten</a>
                                 </li>
                                 @else
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/Eintraege/verwalten">Einträge verwalten</a>
+                                    <a class="nav-link" href="/Eintraege/verwalten"><img src="/images/icons/notes.svg" alt="Icon verwalten">Einträge verwalten</a>
                                 </li>
                                 @endif
                             <li class="nav-item">
                                 <form method="POST" action="/abmelden">
                                     @csrf
-                                    <button class="btn btn-inline nav-link" type="submit">
+                                    <button class="btn btn-inline nav-link btn-icon" type="submit">
+                                        <img src="/images/icons/log-out.svg" alt="Icon abmelden">
                                         Abmelden
                                     </button>
                                 </form>
                             </li>
                             @else
                             <li class="nav-item">
-                                <a class="nav-link" href="/anmelden">Anmelden</a>
+                                <a class="nav-link" href="/anmelden"><img src="/images/icons/log-in.svg" alt="Icon anmelden">Anmelden</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/registrieren">Registrieren</a>
+                                <a class="nav-link" href="/registrieren"><img src="/images/icons/user-plus.svg" alt="Icon registrieren">Registrieren</a>
                             </li>
                             @endauth
                         </ul>

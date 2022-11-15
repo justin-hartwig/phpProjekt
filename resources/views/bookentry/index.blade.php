@@ -8,6 +8,6 @@
         @endif
     @endforeach
     @auth
-        <a href="/Eintraege/erstellen"><button class="btn btn-primary mt-3">Neuen Gästebucheintrag anlegen</button></a>
+        <a href="/Eintraege/erstellen"><button class="btn btn-primary btn-icon mt-3"><img src="/images/icons/plus.svg" alt="Icon hinzufügen">Neuen Gästebucheintrag anlegen</button></a>
     @endauth
 </x-layout>

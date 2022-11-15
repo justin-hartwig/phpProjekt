@@ -23,15 +23,15 @@
                                 @csrf
                                 @method('PUT')
                                 @if($entry->released)
-                                    <button class="btn btn-primary">Verbergen</button>
+                                    <button class="btn btn-primary btn-icon"><img src="/images/icons/removerelease.svg" alt="Icon verbergen">Verbergen</button>
                                 @else
-                                    <button class="btn btn-primary">Freigeben</button>
+                                    <button class="btn btn-primary btn-icon"><img src="/images/icons/release.svg" alt="Icon freigeben">Freigeben</button>
                                 @endif
                             </form>
                             <form method="POST" action="/admin/Eintraege/{{$entry->id}}">
                                 @csrf
                                 @method('DELETE')
-                                <button class="btn btn-danger">Eintrag löschen</button>
+                                <button class="btn btn-danger btn-icon"><img src="/images/icons/trash.svg" alt="Icon löschen">Eintrag löschen</button>
                             </form>
                         </div>
                     </div>
@@ -39,5 +39,5 @@
             </div>
         </div>
     @endif
-    <a href="/Eintraege/erstellen"><button class="btn btn-primary">Neuen Gästebucheintrag anlegen</button></a>
+    <a href="/Eintraege/erstellen"><button class="btn btn-primary btn-icon mt-3"><img src="/images/icons/plus.svg" alt="Icon hinzufügen">Neuen Gästebucheintrag anlegen</button></a>
 </x-layout>

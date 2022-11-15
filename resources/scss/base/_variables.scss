@@ -15,4 +15,8 @@ $default-heading-size: 35px;
 $default-color-transition: all 0.2s ease-in-out;
 
 //filter
-$filter-to-black: brightness(0%);
+$filter-black: brightness(0%);
+$filter-white: brightness(100%);
+$filter-text-color: brightness(0) saturate(100%) invert(9%) sepia(5%) saturate(12%) hue-rotate(323deg) brightness(101%) contrast(90%);
+$filter-danger: brightness(0) saturate(100%) invert(26%) sepia(22%) saturate(5663%) hue-rotate(338deg) brightness(103%) contrast(91%);
+$filter-success: brightness(0) saturate(100%) invert(44%) sepia(100%) saturate(348%) hue-rotate(71deg) brightness(88%) contrast(85%);

@@ -19,6 +19,6 @@
                 <p class="error-text">{{$message}}</p>
             @enderror
         </div>
-        <button type="submit" class="btn btn-success">Bearbeiteten Eintrag einreichen</button>
+        <button type="submit" class="btn btn-success btn-icon"><img src="/images/icons/plus.svg" alt="Icon hinzufügen">Bearbeiteten Eintrag einreichen</button>
     </form>
 </x-layout>

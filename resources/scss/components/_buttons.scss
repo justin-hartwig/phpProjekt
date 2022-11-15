@@ -56,3 +56,49 @@ button.btn {
         margin-left: 0;
     }
 }
+
+.btn.btn-icon {
+    display: flex;
+    align-items: center;
+
+    img {
+        transition: $default-color-transition;
+        filter: $filter-text-color;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        img {
+            filter: $filter-white;
+        }
+    }
+
+    &.btn-danger {
+        img {
+            filter: $filter-white;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            img {
+                filter: $filter-danger;
+            }
+        }
+    }
+
+    &.btn-success {
+        img {
+            filter: $filter-white;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            img {
+                filter: $filter-success;
+            }
+        }
+    }
+}

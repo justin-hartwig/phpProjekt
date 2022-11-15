@@ -4,7 +4,7 @@
 
     .navbar-brand img {
         max-width: 5rem;
-        filter: $filter-to-black;
+        filter: $filter-black;
     }
 
     .navbar-nav {
@@ -17,11 +17,21 @@
             text-decoration: none;
             transition: $default-color-transition;
             margin-left: 1.5rem;
+            display: flex;
+            align-items: center;
+
+            img {
+                filter: $filter-text-color;
+            }
 
             &:hover,
             &:focus,
             &:active {
                 color: $primary;
+
+                img {
+                    filter: $filter-success;
+                }
             }
         }
     }

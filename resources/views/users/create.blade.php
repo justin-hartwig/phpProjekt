@@ -30,6 +30,6 @@
             <label class="mb-2" for="password_confirmation">Passwort wiederholen</label>
             <input name="password_confirmation" placeholder="Passwort wiederholen">
         </div>
-        <button type="submit" class="btn btn-success">Registrieren</button>
+        <button type="submit" class="btn btn-success btn-icon"><img src="/images/icons/user-plus.svg" alt="Icon registrieren">Registrieren</button>
     </form>
 </x-layout>
