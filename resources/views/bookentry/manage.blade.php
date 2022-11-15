@@ -8,7 +8,7 @@
         <div class="col-12">
             <div class="book-entry-overview mb-5">
                 @foreach ($bookEntrys as $entry)
-                    <div class="book-entry d-flex justify-content-between align-items-center">
+                    <div class="book-entry mb-2 d-flex flex-wrap justify-content-between align-items-center">
                         <div class="text-wrapper">
                             <a href="/Eintraege/{{$entry->id}}"><h2 class="mb-3">{{$entry->title}}</h2></a>
                             @foreach($users as $user)
@@ -16,9 +16,20 @@
                                     <p>{{$user->name}}</p>
                                 @endif
                             @endforeach
-                            <p>{{$entry->text}}</p>
+                            <p class="mb-0">{{$entry->text}}</p>
                         </div>
                         <div class="button-wraper d-flex flex-wrap">
+                            @if($entry->released)
+                                <div class="releas-indicator">
+                                    <img src="/images/icons/release.svg" alt="Icon freigeben">
+                                    <p>Freigegeben</p>
+                                </div>
+                            @else
+                                <div class="releas-indicator">
+                                    <img src="/images/icons/removerelease.svg" alt="Icon verbergen">
+                                    <p>Nicht Freigegeben</p>
+                                </div>
+                            @endif
                             <a href="/Eintraege/{{$entry->id}}/bearbeiten"><button class="btn btn-primary btn-icon"><img src="/images/icons/pencil.svg" alt="Icon bearbeiten">Bearbeiten</button></a>
                             <form method="POST" action="/Eintraege/{{$entry->id}}">
                                 @csrf

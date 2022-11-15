@@ -1,0 +1,12 @@
+.releas-indicator {
+    display: flex;
+    align-items: center;
+
+    img {
+        filter: $filter-text-color;
+    }
+
+    p {
+        margin: 0;
+    }
+}

@@ -8,7 +8,7 @@
         <div class="col-12">
             <div class="book-entry-overview mb-5">
                 @foreach ($bookEntrys as $entry)
-                    <div class="book-entry d-flex justify-content-between align-items-center flex-wrap">
+                    <div class="book-entry mb-2 d-flex justify-content-between align-items-center flex-wrap">
                         <div class="text-wrapper">
                             <a href="/Eintraege/{{$entry->id}}"><h2 class="mb-3">{{$entry->title}}</h2></a>
                             @foreach($users as $user)
@@ -16,7 +16,7 @@
                                     <p>{{$user->name}}</p>
                                 @endif
                             @endforeach
-                            <p>{{$entry->text}}</p>
+                            <p class="mb-0">{{$entry->text}}</p>
                         </div>
                         <div class="button-wraper d-flex flex-wrap">
                             <form method="POST" action="/admin/Eintraege/{{$entry->id}}/release">
