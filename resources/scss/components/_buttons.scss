@@ -45,34 +45,8 @@ button.btn {
     }
 }
 
-.button-wraper {
-    flex-direction: column;
-
-    .btn {
-        width: 100%;
-    }
-
-    > * {
-        margin-top: 1rem;
-    }
-
-    @media screen and (max-width:1200px){
-        flex-direction: row;
-
-        .btn {
-            width: unset;
-        }
-
-        form .btn,
-        a .btn {
-            margin-left: 1rem;
-        }
-
-        form:first-child .btn,
-        a:first-child .btn {
-            margin-left: 0;
-        }
-    }
+.button-wraper .btn {
+    margin: 1rem 1rem 0 0;
 }
 
 .btn.btn-icon {
