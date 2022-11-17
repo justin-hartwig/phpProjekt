@@ -19,6 +19,8 @@ use App\Http\Controllers\BookEntryControllerAdmin;
 //BookEntryController
 Route::get('/', [BookEntryController::class, 'index']);
 
+Route::get('/search', [BookEntryController::class, 'search']);
+
 Route::get('/Eintraege/erstellen', [BookEntryController::class, 'create'])->middleware('auth');
 
 Route::post('/Eintraege', [BookEntryController::class, 'store'])->middleware('auth');

@@ -21,6 +21,15 @@ class BookEntryController extends Controller
         ]);
     }
 
+    public function search(Request $request) {
+        $entrys = BookEntry::where('title', 'Like', '%'.$request->search.'%')->get();
+
+        return response()->json([
+            'entrys' => $entrys,
+            'users' => User::all()
+         ]);
+    }
+
     public function show(BookEntry $bookentry) {
         return view('bookentry.show', [
             'bookEntry' => $bookentry,

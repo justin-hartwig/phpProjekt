@@ -3,11 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>Gästebuch - Die Waldhütte</title>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Vite Includs -->
-        @vite(['resources/scss/main.scss', 'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'])
+        @vite(['resources/scss/main.scss', 'resources/js/app.js','node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'])
 
     </head>
     <body>
