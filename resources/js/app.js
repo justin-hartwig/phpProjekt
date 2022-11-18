@@ -2,7 +2,7 @@ import { each } from 'lodash';
 import './bootstrap';
 
 $(document).ready(function(){
-    $(document).on('keyup', '#search', function(e){
+    $(document).on('keyup', '#search', function(){
         let value = $(this).val();
     
         $.ajaxSetup({

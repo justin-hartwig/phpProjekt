@@ -3,9 +3,7 @@
         <h1 class="text-center py-5">Gästebuch</h1>
     </div>
     <div class="col-12">
-        <div class="search">
-            <input type="search" name="search" id="search" placeholder="Suche">
-        </div>
+        <input class="search mb-4 w-100" type="search" name="search" id="search" placeholder="Suche">
     </div>
     <div class="container">
         <div class="book-entrys row">
