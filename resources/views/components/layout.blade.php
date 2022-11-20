@@ -9,7 +9,7 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <!-- Vite Includs -->
-        @vite(['resources/scss/main.scss', 'resources/js/app.js','node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'])
+        @vite(['resources/scss/main.scss', 'resources/js/app.js'])
 
     </head>
     <body>

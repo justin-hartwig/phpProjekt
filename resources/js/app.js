@@ -1,4 +1,3 @@
-import { each } from 'lodash';
 import './bootstrap';
 
 $(document).ready(function(){
