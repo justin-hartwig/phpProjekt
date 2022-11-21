@@ -8,7 +8,8 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
+     *Schema for a user. Added a boolean field is_admin to the default Laravel version.
+     * 
      * @return void
      */
     public function up()

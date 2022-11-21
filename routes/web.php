@@ -14,6 +14,8 @@ use App\Http\Controllers\BookEntryControllerAdmin;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
+| Contains all routes for users, book entries and admin users.
+| URLs are in German, controller and functions in English.
 */
 
 //BookEntryController

@@ -9,6 +9,7 @@ class IsAdmin
 {
     /**
      * Handle an incoming request.
+     * Checks if the user is an admin. Continues on success, aborts with 403 on failure.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next

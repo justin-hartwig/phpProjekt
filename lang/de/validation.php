@@ -11,6 +11,7 @@ return [
     | the validator class. Some of these rules have multiple versions such
     | as the size rules. Feel free to tweak each of these messages here.
     |
+    | This file contains the default language lines in english and some lines for german.
     */
 
     'accepted' => 'The :attribute must be accepted.',

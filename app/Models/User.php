@@ -42,6 +42,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    //Defines that a user can have many book entries.
     public function bookentrys() {
         return $this->hasMany(BookEntry::class, 'user_id');
     }

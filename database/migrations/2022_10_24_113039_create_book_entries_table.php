@@ -8,6 +8,11 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     * Schema for a book entry. 
+     * Containing a unique id.
+     * The id of the user who created the entry.
+     * Strings for title and text with different sizes.
+     * A field to determine if the entry was released.
      *
      * @return void
      */

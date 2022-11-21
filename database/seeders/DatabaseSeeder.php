@@ -12,6 +12,7 @@ class DatabaseSeeder extends Seeder
 {
     /**
      * Seed the application's database.
+     * Seeds the database users and book entries. Creates a default admin user.
      *
      * @return void
      */

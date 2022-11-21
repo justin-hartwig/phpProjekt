@@ -11,6 +11,10 @@ class BookEntryFactory extends Factory
 {
     /**
      * Define the model's default state.
+     * Generates random values for book entries with the library faker.
+     * Title is a simple sentence.
+     * Text a 5 sentence paragraph.
+     * Released either false or true.
      *
      * @return array<string, mixed>
      */

@@ -9,6 +9,7 @@ class BookEntry extends Model
 {
     use HasFactory;
 
+    //Defines that a book entry belongs to one specific user.
     public function user() {
         return $this->belongsTo(User::class, 'user_id');
     }

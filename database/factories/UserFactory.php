@@ -12,6 +12,11 @@ class UserFactory extends Factory
 {
     /**
      * Define the model's default state.
+     * Generates random values for users with the library faker.
+     * Name is a random name.
+     * Is Admin is always false.
+     * The email a random safe email.
+     * Password always the hashed "password".
      *
      * @return array<string, mixed>
      */
